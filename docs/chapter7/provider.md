@@ -28,14 +28,14 @@ void onLoginChanged(e){
 @override
 void initState() {
   //订阅登录状态改变事件
-  bus.on(Event.login,onLogin);
+  bus.on(Event.login,onLoginChanged);
   super.initState();
 }
 
 @override
 void dispose() {
   //取消订阅
-  bus.off(Event.login,onLogin);
+  bus.off(Event.login,onLoginChanged);
   super.dispose();
 }
 ```
